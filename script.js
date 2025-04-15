@@ -2,8 +2,6 @@ const cities = ["Delhi", "Mumbai", "Kolkata", "Chennai", "Bangalore", "Hyderabad
 
 async function fetchWeather(city) {
   try {
-    const apiKey = 'b5711101c19e19425e2309bea7b71742';
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
 
     if (!response.ok) throw new Error("Failed to fetch weather data");
     const data = await response.json();

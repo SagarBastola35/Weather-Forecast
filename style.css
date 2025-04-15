@@ -1,0 +1,147 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto; text-align: center;
+    transition: background-color 0.3s;
+}
+
+header {
+    background: #006064;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.controls input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 70%;
+    transition: border-color 0.3s;
+}
+
+.controls button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #00574b;
+}
+
+.weather-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.city-weather {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.city-weather:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.city-name {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #00796b;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s;
+}
+
+.details-btn {
+    margin-top: 0.5rem;
+    background-color: #006064;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #004d4d;
+}
+
+.loading {
+    font-size: 1.2rem;
+    color: #00796b;
+    margin-top: 2rem;
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.error {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}

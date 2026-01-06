@@ -1,4 +1,4 @@
-const cities = ["Delhi", "Mumbai", "Kolkata", "Chennai", "Bangalore", "Hyderabad", "Ahmedabad", "Pune", "Jaipur", "Bhopal"];
+const cities = ["Delhi", "Mumbai", "Kolkata", "Chennai", "Bangalore", "Hyderabad", "Ahmedabad", "Pune", "Jaipur", "Bhopal", "Assam", "Noida"];
 
 async function fetchWeather(city) {
   try {

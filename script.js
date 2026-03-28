@@ -1,9 +1,28 @@
-const cities = ["Delhi", "Mumbai", "Kolkata", "Chennai", "Bangalore", "Hyderabad", "Ahmedabad", "Pune", "Jaipur", "Bhopal", "Assam", "Noida"];
+const cities = [
+  "Delhi",
+  "Mumbai",
+  "Kolkata",
+  "Chennai",
+  "Bangalore",
+  "Hyderabad",
+  "Ahmedabad",
+  "Pune",
+  "Jaipur",
+  "Bhopal",
+  "Assam",
+  "Noida",
+  "Baihata",
+  "Tezpur",
+  "Goreswar",
+  "Guwahati",
+];
 
 async function fetchWeather(city) {
   try {
-    const apiKey = 'b5711101c19e19425e2309bea7b71742';
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+    const apiKey = "b5711101c19e19425e2309bea7b71742";
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`,
+    );
 
     if (!response.ok) throw new Error("Failed to fetch weather data");
     const data = await response.json();
@@ -49,7 +68,10 @@ async function displayWeather() {
 
 async function searchWeather() {
   const input = document.getElementById("searchInput").value.trim();
-  if (!input) return;
+  if (!input) {
+    alert("Please enter your city name");
+    return;
+  }
   const container = document.getElementById("weatherContainer");
   container.innerHTML = '<div class="loading">Loading weather data...</div>';
   const weather = await fetchWeather(input);
@@ -59,7 +81,10 @@ async function searchWeather() {
   document.getElementById("searchInput").value = ""; // Clear input after search
 }
 
-document.getElementById("searchButton").addEventListener("click", searchWeather);
+document
+  .getElementById("searchButton")
+  .addEventListener("click", searchWeather);
+
 document.getElementById("searchInput").addEventListener("keypress", (e) => {
   if (e.key === "Enter") searchWeather();
 });

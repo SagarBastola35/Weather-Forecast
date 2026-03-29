@@ -164,11 +164,12 @@ header h1 {
 .footer {
   position: fixed;
   bottom: 0;
-  padding: 0.5rem;
+  padding: 2px;
   background-color: #006064;
   color: white;
   width: 100%;
   object-fit: contain;
+  border-radius: 5px;
 }
 .footer p {
   display: flex;
@@ -208,5 +209,35 @@ header h1 {
     border-radius: 4px;
     width: 70%;
     transition: border-color 0.3s;
+  }
+
+  .footer {
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    padding: 2px;
+    background-color: #006064;
+    color: white;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+  }
+
+  .footer p {
+    display: inline-block;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font: small;
+    font-size: medium;
+    overflow: hidden;
+  }
+
+  .footer .name a {
+    color: yellow;
+    font: medium;
+    font-size: medium;
+    gap: 5px;
   }
 }
